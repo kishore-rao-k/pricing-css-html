@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
-/* Global Reset */
 * {
     font-family: "Montserrat", serif;
     margin: 0;
@@ -23,7 +22,6 @@ h1 {
     padding: 50px;
 }
 
-/* Toggle Section */
 .toggle {
     display: flex;
     justify-content: center;
@@ -138,7 +136,6 @@ ul {
 
 li {
     margin-bottom: 10px;
-    /* font-size: 0.9rem; */
     color: #666;
     font-weight: bold;
 }
@@ -153,7 +150,6 @@ button {
     padding: 15px 15px;
     border-radius: 5px;
     cursor: pointer;
-    /* font-size: 0.9rem; */
 }
 
 button:hover {
@@ -163,7 +159,6 @@ button:hover {
     color: #665af0;
 }
 
-/* Highlighted Professional Card */
 .card.highlighted {
     background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff;
@@ -184,7 +179,6 @@ button:hover {
     padding: 15px 15px;
     border-radius: 5px;
     cursor: pointer;
-    /* font-size: 0.9rem; */
 }
 
 .highlightedbutton:hover {
