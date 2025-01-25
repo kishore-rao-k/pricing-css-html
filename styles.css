@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+
+/* Global Reset */
+* {
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6ff;
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+    height: 100vh;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Toggle Section */
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.toggle span {
+    font-size: 0.9rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #665af0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #665af0;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+h4 {
+    font-weight: bold;
+    color: #666;
+}
+
+.cards {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50vh;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+hr {
+    height: 1px;
+    background: #dfdcdc;
+    border: none;
+    margin: 5%;
+}
+
+h2 {
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    /* font-size: 0.9rem; */
+    color: #666;
+    font-weight: bold;
+}
+
+button {
+    background: linear-gradient(135deg, #665af0, #a48bef);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    width: 90%;
+    align-self: center;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* font-size: 0.9rem; */
+}
+
+/* Highlighted Professional Card */
+.card.highlighted {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+
+}
+
+.card.highlighted ul li {
+    color: #fff;
+}
+
+.highlightedbutton {
+    background-color: white;
+    color: #665af0;
+    font-weight: bold;
+    border: none;
+    width: 90%;
+    align-self: center;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* font-size: 0.9rem; */
+}
+
+.ProfessionalHeading {
+    color: #f6f6ff;
+}
+
+@media (min-width: 1440px) {
+    .cards {
+        margin-top: 8rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .card {
+        width: 40vh;
+        height: 50vh;
+    }
+
+    .highlighted {
+        transform: scale(1.1);
+    }
+}
