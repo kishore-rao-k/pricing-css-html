@@ -2,6 +2,7 @@
 
 * {
     font-family: "Montserrat", serif;
+    font-weight: 700;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,17 +10,19 @@
 
 body {
     background-color: #f6f6ff;
-    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-image: url(images/bg-top.svg);
     background-repeat: no-repeat;
-    background-position: right top, left bottom;
+    background-position: top right;
     height: 100vh;
     font-size: 15px;
 }
 
-h1 {
+
+.header-h1 {
     font-size: 1.8rem;
     text-align: center;
     padding: 50px;
+    color: #666;
 }
 
 .toggle {
@@ -85,31 +88,32 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-h4 {
+.h4-tag {
     font-weight: bold;
     color: #666;
 }
 
 .cards {
-    margin-top: 3rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
     align-items: center;
+    padding: 1rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 65vh;
+    gap: 1rem;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 2rem 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 50vh;
+    width: 100%;
 }
 
 .price {
@@ -118,33 +122,33 @@ h4 {
     margin: 10px 0;
 }
 
-hr {
+.hr-line {
     height: 1px;
     background: #dfdcdc;
     border: none;
     margin: 5%;
 }
 
-h2 {
+.h2-tag {
     color: #666;
 }
 
-ul {
+.ul-tag {
     list-style: none;
     margin: 20px 0;
 }
 
-li {
+.li-tag {
     margin-bottom: 10px;
     color: #666;
     font-weight: bold;
 }
 
-button {
+.learnMore-button {
     background: #665af0;
     color: #fff;
     font-weight: bold;
-    border: solid 2px #665af0;
+    border: solid 1px #665af0;
     width: 90%;
     align-self: center;
     padding: 15px 15px;
@@ -155,7 +159,7 @@ button {
 button:hover {
     cursor: pointer;
     background: white;
-    border: solid 2px #665af0;
+    border: solid 1px #665af0;
     color: #665af0;
 }
 
@@ -173,7 +177,7 @@ button:hover {
     background-color: white;
     color: #665af0;
     font-weight: bold;
-    border: solid 2px white;
+    border: solid 1px white;
     width: 90%;
     align-self: center;
     padding: 15px 15px;
@@ -184,17 +188,25 @@ button:hover {
 .highlightedbutton:hover {
     cursor: pointer;
     background: transparent;
-    border: solid 2px white;
+    border: solid 1px white;
     color: white;
 }
 
 .ProfessionalHeading {
+    linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #f6f6ff;
 }
 
 @media (min-width: 1440px) {
+    body {
+        background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+        background-repeat: no-repeat;
+        background-position: right top, bottom left;
+
+    }
+
     .cards {
-        margin-top: 8rem;
+        margin-top: 5rem;
         flex-direction: row;
         justify-content: center;
         gap: 0px;
@@ -202,7 +214,7 @@ button:hover {
 
     .card {
         width: 40vh;
-        height: 50vh;
+
     }
 
     .highlighted {
